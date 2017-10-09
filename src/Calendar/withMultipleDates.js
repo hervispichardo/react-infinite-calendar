@@ -29,7 +29,7 @@ export const withMultipleDates = compose(
     HeaderComponent: enhanceHeader(HeaderComponent),
     YearsComponent: enhanceYears(YearsComponent),
   })),
-  withProps(({displayDate, onSelect, onBeforeSelect, setDisplayDate, scrollToDate, ...props}) => ({
+  withProps(({displayDate, onSelect, setDisplayDate, scrollToDate, ...props}) => ({
     passThrough: {
       Day: {
         onClick: (date) => handleSelect(date, {onSelect, setDisplayDate}),
@@ -50,7 +50,7 @@ export const withMultipleDates = compose(
 );
 
 function handleSelect(date, {onSelect, setDisplayDate}) {
-  console.log("date on select: ", date)
+  console.log("select date hervis: ", date);
   onSelect(date);
   setDisplayDate(date);
 }
