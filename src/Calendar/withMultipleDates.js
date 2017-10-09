@@ -50,8 +50,6 @@ export const withMultipleDates = compose(
 );
 
 function handleSelect(date, {onSelect, setDisplayDate}) {
-  console.log("select date hervis: ", date);
-  onSelect(date);
   setDisplayDate(date);
 }
 
